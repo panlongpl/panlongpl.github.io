@@ -1,4 +1,173 @@
-<!DOCTYPE html><html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><title>text | PL</title><link rel="stylesheet" type="text/css" href="/css/normalize.css"><link rel="stylesheet" type="text/css" href="/css/highlight.css"><link rel="stylesheet" type="text/css" href="/css/font.css"><link rel="stylesheet" type="text/css" href="/css/noise.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><meta name="generator" content="Hexo 4.0.0"></head><body><article class="wrapper"><div class="post-main"><div class="nav"><nav class="container"><a class="sidebar-nav-item active" href="/">Home</a><a class="sidebar-nav-item" href="/archives">Archives</a></nav><div class="container post-meta"><div class="post-time">2019-11-09</div></div></div><div class="container post-header"><h1>text</h1></div><div class="container post-toc"><details class="toc"><summary class="toc-accordion">Table of Contents</summary><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#AC—CODE"><span class="toc-number">1.</span> <span class="toc-text">AC—CODE</span></a></li></ol></details></div><div class="container post-content"><p>题目：<a href="https://codeforces.com/contest/750/problem/E" target="_blank" rel="noopener"> CF New Year and Old Subsequence</a></p>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<title>
+  
+    text
+  
+</title>
+
+<meta name="description" content="题目： CF New Year and Old Subsequence 题意：给定一个字符串，询问某一个区间内至少需要删除多少个字母，使得剩下的数字含有2017，但不含有2016。 思路定义5个状态  0：空状态，连2都没有1：只有2，没有0连在后面2:   只有20，没有1在后面3:   只有201,没有7在后面4：完整的2017  状态转移  对于任意两个相邻的连续的区间之间的状态的转移，我们">
+<meta property="og:type" content="article">
+<meta property="og:title" content="text">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;text&#x2F;index.html">
+<meta property="og:site_name" content="PL">
+<meta property="og:description" content="题目： CF New Year and Old Subsequence 题意：给定一个字符串，询问某一个区间内至少需要删除多少个字母，使得剩下的数字含有2017，但不含有2016。 思路定义5个状态  0：空状态，连2都没有1：只有2，没有0连在后面2:   只有20，没有1在后面3:   只有201,没有7在后面4：完整的2017  状态转移  对于任意两个相邻的连续的区间之间的状态的转移，我们">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-11-09T11:52:13.678Z">
+<meta name="twitter:card" content="summary">
+
+
+  <link rel="alternative" href="/atom.xml" title="PL" type="application/atom+xml">
+
+
+
+  <link rel="icon" href="/favicon.png">
+
+
+<link rel="stylesheet" href="/perfect-scrollbar/css/perfect-scrollbar.min.css">
+<link rel="stylesheet" href="/styles/main.css">
+
+
+
+
+
+
+</head>
+<body
+  
+    class="monochrome"
+  
+  >
+  <div class="mobile-header">
+  <button class="sidebar-toggle" type="button">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <a class="title" href="/">PL</a>
+</div>
+
+  <div class="main-container">
+    <div class="sidebar">
+  <div class="header">
+    <h1 class="title"><a href="/">PL</a></h1>
+    
+    <div class="info">
+      <div class="content">
+        
+        
+          <div class="author">John Doe</div>
+        
+      </div>
+      
+        <div class="avatar">
+          
+            <a href="/about"><img src="https://cn.gravatar.com/avatar/35fef74d731255cd569c2c2b0b9e87e4?s=200"></a>
+          
+        </div>
+      
+    </div>
+  </div>
+  <div class="body">
+    
+      
+        <ul class="nav">
+          
+            
+              <li class="category-list-container">
+                <a href="javascript:;" target="_blank" rel="noopener">Category</a>
+                <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/">Diary</a><span class="category-list-count">1</span></li></ul>
+              </li>
+            
+          
+            
+              <li class="tag-list-container">
+                <a href="javascript:;" target="_blank" rel="noopener">Tag</a>
+                <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Games/" rel="tag">Games</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PS3/" rel="tag">PS3</a><span class="tag-list-count">1</span></li></ul>
+              </li>
+            
+          
+            
+              <li class="archive-list-container">
+                <a href="javascript:;" target="_blank" rel="noopener">Archive</a>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016</a><span class="archive-list-count">1</span></li></ul>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="/" title="Homepage" external="false">Homepage</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/archives" title="By Year" external="false">By Year</a>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="https://github.com/denjones/hexo-theme-chan" title="Chan" target="_blank" rel="noopener">Chan</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="https://github.com/denjones" title="Github" target="_blank" rel="noopener">Github</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/atom.xml" title="RSS" external="false">RSS</a>
+              </li>
+            
+          
+        </ul>
+      
+    
+  </div>
+</div>
+
+    <div class="main-content">
+      
+        <div style="max-width: 1000px">
+      
+          <article id="post-text" class="article article-type-post">
+  
+    <h1 class="article-header">
+      text
+    </h1>
+  
+  
+
+  <div class="article-info">
+    <span class="article-date">
+  2019-11-09
+</span>
+
+    
+
+    
+
+  </div>
+  <div class="article-entry">
+    <p>题目：<a href="https://codeforces.com/contest/750/problem/E" target="_blank" rel="noopener"> CF New Year and Old Subsequence</a></p>
 <p><strong>题意</strong>：给定一个字符串，询问某一个区间内至少需要删除多少个字母，使得剩下的数字含有2017，但不含有2016。</p>
 <p><strong>思路</strong><br><strong>定义5个状态</strong></p>
 <blockquote>
@@ -22,7 +191,120 @@
 <p>这题其实和上面是一样的，就是把变成了2019和2018，并且反过来了。</p>
 <p>那么我们只需要把所给的字符串反转一下，查询的区间也反转一下就可以了。</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">200</span> * <span class="number">1000</span> + <span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> n, q;</span><br><span class="line"><span class="keyword">char</span> s[N];</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span> &#123;</span></span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">5</span>][<span class="number">5</span>];</span><br><span class="line">	node() &#123; <span class="built_in">memset</span>(a, <span class="number">0x3f</span>, <span class="keyword">sizeof</span>(a)); &#125;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++)a[i][i] = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">switch</span>(x)</span><br><span class="line">		&#123;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">2</span>: &#123;a[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">1</span>, a[<span class="number">0</span>][<span class="number">1</span>] = <span class="number">0</span>; <span class="keyword">break</span>; &#125;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">0</span>: &#123;a[<span class="number">1</span>][<span class="number">1</span>] = <span class="number">1</span>, a[<span class="number">1</span>][<span class="number">2</span>] = <span class="number">0</span>; <span class="keyword">break</span>; &#125;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">1</span>: &#123;a[<span class="number">2</span>][<span class="number">2</span>] = <span class="number">1</span>, a[<span class="number">2</span>][<span class="number">3</span>] = <span class="number">0</span>; <span class="keyword">break</span>; &#125;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">9</span>: &#123;a[<span class="number">3</span>][<span class="number">3</span>] = <span class="number">1</span>; a[<span class="number">3</span>][<span class="number">4</span>] = <span class="number">0</span>; <span class="keyword">break</span>; &#125;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">8</span>: &#123;a[<span class="number">3</span>][<span class="number">3</span>] = <span class="number">1</span>; a[<span class="number">4</span>][<span class="number">4</span>] = <span class="number">1</span>; <span class="keyword">break</span>; &#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	node <span class="keyword">operator</span>+(node A) &#123;</span><br><span class="line">		node ans=node();</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; ++i) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">5</span>; ++j) &#123;</span><br><span class="line">				<span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; <span class="number">5</span>; ++k) &#123;</span><br><span class="line">					ans.a[i][j] = <span class="built_in">min</span>(ans.a[i][j], a[i][k] + A.a[k][j]);;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> ans;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;T[N&lt;&lt;<span class="number">2</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">build</span><span class="params">(<span class="keyword">int</span> rt, <span class="keyword">int</span> l, <span class="keyword">int</span> r)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (l == r) &#123;</span><br><span class="line">		T[rt].init(s[l]-<span class="string">'0'</span>);</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> mid = l + r &gt;&gt; <span class="number">1</span>;</span><br><span class="line">	build(rt&lt;&lt;<span class="number">1</span>,l,mid);</span><br><span class="line">	build(rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span>,mid+<span class="number">1</span>,r);</span><br><span class="line"></span><br><span class="line">	T[rt] = T[rt &lt;&lt; <span class="number">1</span>] + T[rt &lt;&lt; <span class="number">1</span> | <span class="number">1</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">node <span class="title">query</span><span class="params">(<span class="keyword">int</span> rt,<span class="keyword">int</span> l,<span class="keyword">int</span> r,<span class="keyword">int</span> ql,<span class="keyword">int</span> qr)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (l&gt;=ql &amp;&amp; r&lt;=qr) <span class="keyword">return</span> T[rt];</span><br><span class="line">	<span class="keyword">int</span> mid = l + r &gt;&gt; <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span> (qr &lt;= mid)<span class="keyword">return</span> query(rt&lt;&lt;<span class="number">1</span>,l,mid,ql,qr);</span><br><span class="line">	<span class="keyword">if</span> (ql &gt; mid)<span class="keyword">return</span> query(rt &lt;&lt; <span class="number">1</span> | <span class="number">1</span>, mid + <span class="number">1</span>, r, ql, qr);</span><br><span class="line">	<span class="keyword">return</span> query(rt &lt;&lt; <span class="number">1</span>, l, mid, ql, qr) + query(rt &lt;&lt; <span class="number">1</span> | <span class="number">1</span>, mid + <span class="number">1</span>, r, ql, qr);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;q);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%s"</span>,s+<span class="number">1</span>);</span><br><span class="line">	reverse(s+<span class="number">1</span>,s+n+<span class="number">1</span>);</span><br><span class="line">	build(<span class="number">1</span>, <span class="number">1</span>, n);</span><br><span class="line">	<span class="keyword">while</span> (q--) &#123;</span><br><span class="line">		<span class="keyword">int</span> l, r;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;l,&amp;r);</span><br><span class="line">		<span class="keyword">int</span> ans = query(<span class="number">1</span>, <span class="number">1</span>, n, n-r+<span class="number">1</span>, n-l+<span class="number">1</span>).a[<span class="number">0</span>][<span class="number">4</span>];</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans==<span class="number">0x3f3f3f3f</span>?<span class="number">-1</span>:ans);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</div></div><div class="post-main post-comment"></div></article><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.css"><script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script><script src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js"></script><script>$(document).ready(function() {
-  $(".fancybox").fancybox();
-});
-</script></body></html>
+
+  </div>
+  <footer class="article-footer">
+    
+  <div class="cc">
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/deed.e" target="_blank" title="Attribution-ShareAlike">
+      <img src="/images/cc/cc.png">
+      
+          <img src="/images/cc/by.png">
+        
+          <img src="/images/cc/sa.png">
+      
+      <span>
+        This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
+      </span>
+    </a>
+  </div>
+
+
+    
+
+  </footer>
+</article>
+
+
+
+
+
+
+
+          <div class="main-footer">
+  
+    © 2019 PL - Powered by <a href="http://hexo.io" target="_blank">Hexo</a> - Theme <a href="https://github.com/denjones/hexo-theme-chan" target="_blank">Chan</a>
+  
+</div>
+
+      
+        </div>
+      
+    </div>
+  </div>
+  <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
+  <link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+             It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/PhotoSwipe/photoswipe.js"></script>
+  <script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
+
+
+<script src="/perfect-scrollbar/js/min/perfect-scrollbar.min.js"></script>
+<script src="/scripts/main.js"></script>
+
+</body>
+</html>
